@@ -1,5 +1,6 @@
-input_dir: /path/to/experiments/exp_name
-prompts_file_path: /path/to/prompts.txt
+input_dir: experiments/dogsun1
+prompts_file_path: prompts.txt
 iteration: 250
-seeds: [ 0, 1, 2, 3 ]
+seeds: [104, 8385, 9348, 283, 12]
 torch_dtype: fp16
+truncation_idxs: [20, 250]

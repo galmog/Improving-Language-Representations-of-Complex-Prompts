@@ -1,0 +1,60 @@
+data:
+  center_crop: false
+  dataloader_num_workers: 8
+  learnable_property: object
+  placeholder_token: spag
+  repeats: 100
+  resolution: 512
+  super_category_token: dog
+  train_data_dir: gen_images/spagbike
+eval:
+  num_denoising_steps: 50
+  num_validation_images: 4
+  validation_prompts:
+  - A photo of a {}
+  - A photo of a {} on a beach
+  - App icon of {}
+  - A painting of {} in the style of Monet
+  validation_seeds:
+  - 42
+  - 420
+  - 501
+  - 5456
+  validation_steps: 250
+log:
+  checkpoints_total_limit: null
+  exp_dir: experiments/spagbike
+  exp_name: spagbike
+  logging_dir: experiments/spagbike/logs
+  report_to: tensorboard
+  save_steps: 250
+model:
+  mapper_checkpoint_path: null
+  nested_dropout_prob: 0.5
+  normalize_mapper_output: true
+  num_pe_time_anchors: 10
+  output_bypass: true
+  pe_sigmas:
+    sigma_l: 2.0
+    sigma_t: 0.03
+  pretrained_model_name_or_path: CompVis/stable-diffusion-v1-4
+  revision: null
+  target_norm: null
+  use_nested_dropout: true
+  use_positional_encoding: true
+optim:
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 1.0e-08
+  adam_weight_decay: 0.01
+  allow_tf32: false
+  gradient_accumulation_steps: 4
+  gradient_checkpointing: false
+  learning_rate: 0.001
+  lr_scheduler: constant
+  lr_warmup_steps: 0
+  max_train_steps: 1000
+  mixed_precision: 'no'
+  scale_lr: true
+  seed: null
+  train_batch_size: 2

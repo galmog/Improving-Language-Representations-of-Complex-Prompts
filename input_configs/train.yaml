@@ -1,11 +1,11 @@
 log:
-  exp_name: exp_name
-  exp_dir: /path/to/experiments
+  exp_name: dogsuncat
+  exp_dir: experiments/
   save_steps: 250
 data:
-  train_data_dir: /path/to/data/concept
-  placeholder_token: <concept-name>
-  super_category_token: super_category
+  train_data_dir: gen_images/dogsuncat
+  placeholder_token: dogcat
+  super_category_token: cat
   dataloader_num_workers: 8
 model:
   pretrained_model_name_or_path: CompVis/stable-diffusion-v1-4
